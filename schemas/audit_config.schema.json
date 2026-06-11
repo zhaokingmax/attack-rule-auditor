@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["scope", "audit", "verification", "safety"],
+  "properties": {
+    "scope": {
+      "type": "object",
+      "required": ["platform", "scope_file", "attack_index", "scenario_model", "field_alias_pack"],
+      "properties": {
+        "platform": {"type": "string"},
+        "scope_file": {"type": "string"},
+        "attack_index": {"type": "string"},
+        "scenario_model": {"type": "string"},
+        "field_alias_pack": {"type": "string"}
+      }
+    },
+    "audit": {
+      "type": "object",
+      "properties": {
+        "output_root": {"type": "string"},
+        "phase_timeout_seconds": {"type": "integer", "minimum": 10},
+        "retention_keep_latest": {"type": "integer", "minimum": 0},
+        "retention_archive_root": {"type": "string"}
+      }
+    },
+    "verification": {"type": "object"},
+    "safety": {"type": "object"}
+  }
+}

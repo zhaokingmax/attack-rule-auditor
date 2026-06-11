@@ -1,0 +1,23 @@
+{
+  "skill_name": "attack-rule-auditor",
+  "evals": [
+    {
+      "id": "audit-linux-container-rule",
+      "prompt": "Audit this Sigma/Falco-style Linux container rule against MITRE ATT&CK coverage and tell me which claims are overclaimed, which fields are missing, and how to harden it.",
+      "expected_output": "Blocker-first report with Linux/Containers/Kubernetes/Network Devices scope only, remediation findings, field-chain proof gaps, and safe code-patch guidance.",
+      "files": ["laji/test_inputs/container_escape_rule.yml"]
+    },
+    {
+      "id": "remediation-code-guidance",
+      "prompt": "Given an audit output with remediation_plan.jsonl, produce defensive code changes for the parser or rule in the target language without attack payloads.",
+      "expected_output": "Language-specific defensive patch blueprint, required fields, validation requirements, and explicit no-payload safety boundary.",
+      "files": []
+    },
+    {
+      "id": "network-device-scope",
+      "prompt": "Check whether this detection package covers Linux, Containers, Kubernetes, and Network Devices only. Do not include Windows/macOS/SaaS/IaaS.",
+      "expected_output": "Supported-scope lock, Network Devices telemetry requirements, and conservative caps for missing inventory or sensor context.",
+      "files": []
+    }
+  ]
+}

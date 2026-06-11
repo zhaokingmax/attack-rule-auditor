@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "network_devices": {"type": "boolean"},
+    "network_device_syslog": {"type": "boolean"},
+    "network_device_aaa": {"type": "boolean"},
+    "network_device_config_change": {"type": "boolean"},
+    "netflow_or_ipfix": {"type": "boolean"},
+    "snmp_traps": {"type": "boolean"},
+    "routing_control_plane": {"type": "boolean"},
+    "firmware_inventory": {"type": "boolean"},
+    "device_count": {"type": "integer", "minimum": 0},
+    "vendors": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

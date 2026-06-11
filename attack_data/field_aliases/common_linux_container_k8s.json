@@ -1,0 +1,708 @@
+{
+  "version": "10.1",
+  "description": "Common field alias pack for Linux, container, Kubernetes, ECS, OCSF, Falco, auditd, and eBPF-style schemas. Used for ATT&CK Data Component and field-chain gap reduction.",
+  "semantic_fields": {
+    "process.command_line": [
+      "process.command_line",
+      "process.cmdline",
+      "proc.cmdline",
+      "proc.args",
+      "argv",
+      "args",
+      "cmd",
+      "command",
+      "cmdline",
+      "CommandLine",
+      "process.args",
+      "Process Command Line"
+    ],
+    "process.executable": [
+      "process.executable",
+      "process.path",
+      "proc.exe",
+      "proc.exepath",
+      "exe",
+      "image",
+      "Image",
+      "process.name",
+      "proc.name",
+      "comm"
+    ],
+    "process.pid": [
+      "pid",
+      "process.pid",
+      "proc.pid",
+      "host_pid",
+      "namespace_pid",
+      "ProcessId"
+    ],
+    "process.parent_pid": [
+      "ppid",
+      "process.parent.pid",
+      "parent.pid",
+      "proc.ppid",
+      "ParentProcessId"
+    ],
+    "process.start_time": [
+      "process.start_time",
+      "proc.start_time",
+      "start_time",
+      "process.created",
+      "evt.time"
+    ],
+    "user.id": [
+      "uid",
+      "user.id",
+      "user.uid",
+      "auid",
+      "euid",
+      "effective_uid",
+      "user.name",
+      "User"
+    ],
+    "file.path": [
+      "file.path",
+      "fd.name",
+      "path",
+      "filepath",
+      "file.name",
+      "target.path",
+      "object.path",
+      "k8s.object.path"
+    ],
+    "file.operation": [
+      "evt.type",
+      "syscall",
+      "operation",
+      "action",
+      "event.action",
+      "verb",
+      "perm"
+    ],
+    "container.id": [
+      "container.id",
+      "container_id",
+      "containerID",
+      "container.runtime.id",
+      "docker.container.id",
+      "cri.container.id",
+      "cgroup.container_id"
+    ],
+    "container.image": [
+      "container.image",
+      "container.image.name",
+      "image",
+      "image.name",
+      "k8s.container.image"
+    ],
+    "container.runtime": [
+      "container.runtime",
+      "runtime",
+      "cri.runtime",
+      "docker",
+      "containerd",
+      "cri-o",
+      "runc"
+    ],
+    "k8s.pod.uid": [
+      "k8s.pod.uid",
+      "pod.uid",
+      "pod_uid",
+      "kubernetes.pod.uid"
+    ],
+    "k8s.namespace": [
+      "k8s.namespace",
+      "namespace",
+      "kubernetes.namespace",
+      "objectRef.namespace"
+    ],
+    "k8s.audit.verb": [
+      "verb",
+      "k8s.audit.verb",
+      "request.verb",
+      "event.verb"
+    ],
+    "k8s.audit.resource": [
+      "resource",
+      "objectRef.resource",
+      "k8s.audit.resource",
+      "request.resource"
+    ],
+    "k8s.audit.request_object": [
+      "requestObject",
+      "request.object",
+      "k8s.audit.requestObject"
+    ],
+    "k8s.audit.response_object": [
+      "responseObject",
+      "response.object",
+      "k8s.audit.responseObject"
+    ],
+    "network.destination": [
+      "dest.ip",
+      "destination.ip",
+      "dst_ip",
+      "remote.ip",
+      "net.dst.ip",
+      "destination.address"
+    ],
+    "network.port": [
+      "dest.port",
+      "destination.port",
+      "dport",
+      "remote.port",
+      "net.dst.port"
+    ],
+    "image.name": [
+      "image.name",
+      "container.image",
+      "container.image.name",
+      "container.image.repository",
+      "k8s.container.image",
+      "repository",
+      "repo"
+    ],
+    "image.tag": [
+      "image.tag",
+      "container.image.tag",
+      "tag",
+      "image_tag"
+    ],
+    "image.digest": [
+      "image.digest",
+      "container.image.digest",
+      "digest",
+      "sha256",
+      "repoDigest"
+    ],
+    "image.id": [
+      "image.id",
+      "container.image.id",
+      "image_id"
+    ],
+    "k8s.audit.subresource": [
+      "subresource",
+      "objectRef.subresource",
+      "k8s.audit.subresource",
+      "k8s.subresource"
+    ],
+    "k8s.audit.namespace": [
+      "namespace",
+      "objectRef.namespace",
+      "k8s.audit.namespace",
+      "k8s.namespace"
+    ],
+    "k8s.audit.user": [
+      "user.username",
+      "user.groups",
+      "k8s.audit.user",
+      "user.id"
+    ],
+    "network.bytes": [
+      "bytes",
+      "bytes_in",
+      "bytes_out",
+      "source.bytes",
+      "destination.bytes",
+      "network.bytes"
+    ],
+    "network.protocol": [
+      "network.protocol",
+      "protocol",
+      "transport",
+      "proto"
+    ],
+    "service.name": [
+      "service.name",
+      "unit.name",
+      "systemd.unit",
+      "service"
+    ],
+    "service.action": [
+      "service.action",
+      "systemctl.action",
+      "event.action",
+      "action"
+    ],
+    "module.name": [
+      "module.name",
+      "kernel.module.name",
+      "kmod.name"
+    ],
+    "module.action": [
+      "module.action",
+      "kernel.module.action",
+      "init_module",
+      "delete_module"
+    ],
+    "scheduled_job.name": [
+      "cron.name",
+      "scheduled_job.name",
+      "systemd.timer",
+      "job.name"
+    ],
+    "scheduled_job.command": [
+      "cron.command",
+      "scheduled_job.command",
+      "systemd.exec",
+      "ExecStart",
+      "process.command_line"
+    ]
+  },
+  "attack_data_component_hints": {
+    "Process Creation": [
+      "process.command_line",
+      "process.executable",
+      "process.pid",
+      "process.parent_pid",
+      "user.id"
+    ],
+    "Process Metadata": [
+      "process.pid",
+      "process.parent_pid",
+      "process.start_time",
+      "container.id",
+      "user.id"
+    ],
+    "File Access": [
+      "file.path",
+      "file.operation",
+      "process.executable",
+      "user.id",
+      "container.id"
+    ],
+    "File Modification": [
+      "file.path",
+      "file.operation",
+      "process.executable",
+      "user.id"
+    ],
+    "Container Creation": [
+      "container.id",
+      "container.image",
+      "container.runtime",
+      "k8s.namespace",
+      "k8s.pod.uid"
+    ],
+    "Cloud Service Modification": [
+      "k8s.audit.verb",
+      "k8s.audit.resource",
+      "k8s.audit.request_object",
+      "user.id",
+      "k8s.audit.subresource"
+    ],
+    "User Account Authentication": [
+      "user.id",
+      "k8s.audit.verb",
+      "k8s.audit.resource"
+    ],
+    "Network Connection Creation": [
+      "network.destination",
+      "network.port",
+      "process.executable",
+      "container.id"
+    ],
+    "Command Execution": [
+      "process.command_line",
+      "process.executable",
+      "user.id",
+      "k8s.audit.verb"
+    ],
+    "Script Execution": [
+      "process.command_line",
+      "process.executable",
+      "file.path",
+      "user.id"
+    ],
+    "Process Access": [
+      "process.pid",
+      "process.parent_pid",
+      "process.executable",
+      "user.id",
+      "container.id"
+    ],
+    "Process Modification": [
+      "process.pid",
+      "process.executable",
+      "user.id",
+      "container.id"
+    ],
+    "Process Termination": [
+      "process.pid",
+      "process.executable",
+      "user.id",
+      "container.id"
+    ],
+    "OS API Execution": [
+      "syscall.name",
+      "process.executable",
+      "process.command_line",
+      "user.id"
+    ],
+    "File Creation": [
+      "file.path",
+      "file.operation",
+      "process.executable",
+      "user.id",
+      "container.id"
+    ],
+    "File Deletion": [
+      "file.path",
+      "file.operation",
+      "process.executable",
+      "user.id",
+      "container.id"
+    ],
+    "File Metadata": [
+      "file.path",
+      "file.operation",
+      "process.executable",
+      "user.id",
+      "container.id"
+    ],
+    "Image Creation": [
+      "image.name",
+      "image.tag",
+      "image.digest",
+      "container.image",
+      "process.command_line",
+      "user.id"
+    ],
+    "Image Metadata": [
+      "image.name",
+      "image.tag",
+      "image.digest",
+      "image.id",
+      "container.image"
+    ],
+    "Image Modification": [
+      "image.name",
+      "image.tag",
+      "image.digest",
+      "process.command_line",
+      "user.id"
+    ],
+    "Container Enumeration": [
+      "container.id",
+      "container.image",
+      "container.runtime",
+      "k8s.namespace",
+      "k8s.pod.uid"
+    ],
+    "Container Start": [
+      "container.id",
+      "container.image",
+      "container.runtime",
+      "process.command_line",
+      "user.id"
+    ],
+    "Pod Creation": [
+      "k8s.pod.uid",
+      "k8s.namespace",
+      "k8s.audit.verb",
+      "k8s.audit.resource",
+      "k8s.audit.request_object",
+      "container.image",
+      "user.id"
+    ],
+    "Pod Enumeration": [
+      "k8s.pod.uid",
+      "k8s.namespace",
+      "k8s.audit.verb",
+      "k8s.audit.resource",
+      "user.id"
+    ],
+    "Cloud Service Enumeration": [
+      "k8s.audit.verb",
+      "k8s.audit.resource",
+      "k8s.audit.subresource",
+      "k8s.namespace",
+      "user.id"
+    ],
+    "Cloud Service Metadata": [
+      "k8s.audit.resource",
+      "k8s.audit.request_object",
+      "k8s.audit.response_object",
+      "k8s.namespace",
+      "user.id"
+    ],
+    "Network Traffic Content": [
+      "network.destination",
+      "network.port",
+      "network.protocol",
+      "network.bytes",
+      "process.executable",
+      "container.id"
+    ],
+    "Network Traffic Flow": [
+      "network.destination",
+      "network.port",
+      "network.protocol",
+      "network.bytes",
+      "process.executable",
+      "container.id"
+    ],
+    "Service Creation": [
+      "service.name",
+      "service.action",
+      "file.path",
+      "process.command_line",
+      "user.id"
+    ],
+    "Service Metadata": [
+      "service.name",
+      "service.action",
+      "process.command_line",
+      "user.id"
+    ],
+    "Service Modification": [
+      "service.name",
+      "service.action",
+      "file.path",
+      "process.command_line",
+      "user.id"
+    ],
+    "Kernel Module Load": [
+      "module.name",
+      "module.action",
+      "process.command_line",
+      "user.id"
+    ],
+    "Module Load": [
+      "module.name",
+      "module.action",
+      "process.command_line",
+      "process.executable",
+      "user.id"
+    ],
+    "Scheduled Job Creation": [
+      "scheduled_job.name",
+      "scheduled_job.command",
+      "file.path",
+      "process.command_line",
+      "user.id"
+    ],
+    "Scheduled Job Modification": [
+      "scheduled_job.name",
+      "scheduled_job.command",
+      "file.path",
+      "process.command_line",
+      "user.id"
+    ],
+    "Scheduled Job Metadata": [
+      "scheduled_job.name",
+      "scheduled_job.command",
+      "file.path",
+      "user.id"
+    ],
+    "User Account Creation": [
+      "user.id",
+      "k8s.audit.verb",
+      "k8s.audit.resource"
+    ],
+    "User Account Modification": [
+      "user.id",
+      "k8s.audit.verb",
+      "k8s.audit.resource"
+    ],
+    "User Account Metadata": [
+      "user.id",
+      "k8s.audit.verb",
+      "k8s.audit.resource"
+    ],
+    "Logon Session Creation": [
+      "user.id",
+      "process.executable",
+      "network.destination"
+    ],
+    "Logon Session Metadata": [
+      "user.id",
+      "process.executable",
+      "network.destination"
+    ]
+  },
+  "process.executable": [
+    "Image",
+    "actor.process.file.path",
+    "proc.exe",
+    "proc.exepath",
+    "proc.name",
+    "proc.pname",
+    "process.command_line",
+    "process.exe",
+    "process.executable",
+    "process.file.path",
+    "process.name",
+    "process.path",
+    "process_exec"
+  ],
+  "process.args": [
+    "ProcessCommandLine",
+    "actor.process.command_line",
+    "args",
+    "argv",
+    "cmdline",
+    "command_line",
+    "proc.args",
+    "proc.cmdline",
+    "process.args",
+    "process.command_line"
+  ],
+  "process.pid": [
+    "actor.process.pid",
+    "host_pid",
+    "pid",
+    "proc.pid",
+    "process.entity_id",
+    "process.pid"
+  ],
+  "process.ppid": [
+    "parent.pid",
+    "parent_process.pid",
+    "ppid",
+    "proc.ppid",
+    "process.parent.pid",
+    "process.ppid"
+  ],
+  "process.start_time": [
+    "event.start",
+    "proc.start_time",
+    "process.created",
+    "process.creation_time",
+    "process.start",
+    "process.start_time",
+    "start_time"
+  ],
+  "user.id": [
+    "SubjectUserSid",
+    "actor.user.uid",
+    "auid",
+    "euid",
+    "uid",
+    "user.effective.id",
+    "user.id",
+    "user.uid"
+  ],
+  "file.path": [
+    "fd.name",
+    "file.full_path",
+    "file.name",
+    "file.path",
+    "file.target_path",
+    "filepath",
+    "object.path",
+    "path",
+    "target.path"
+  ],
+  "file.operation": [
+    "action",
+    "auditd.syscall",
+    "event.action",
+    "evt.type",
+    "file.operation",
+    "operation",
+    "syscall"
+  ],
+  "container.id": [
+    "cgroup.container_id",
+    "container.id",
+    "container.runtime_id",
+    "containerID",
+    "container_id",
+    "kubernetes.container.id",
+    "oci.container.id"
+  ],
+  "container.image": [
+    "container.image",
+    "container.image.name",
+    "container.image.repository",
+    "image",
+    "image_name",
+    "kubernetes.container.image"
+  ],
+  "k8s.pod.uid": [
+    "k8s.pod.uid",
+    "kubernetes.pod.uid",
+    "objectRef.uid",
+    "pod.uid",
+    "pod_uid"
+  ],
+  "k8s.namespace": [
+    "k8s.namespace",
+    "kubernetes.namespace",
+    "namespace",
+    "objectRef.namespace",
+    "request.namespace"
+  ],
+  "k8s.verb": [
+    "event.verb",
+    "k8s.verb",
+    "kubernetes.audit.verb",
+    "request.verb",
+    "verb"
+  ],
+  "k8s.resource": [
+    "k8s.resource",
+    "kubernetes.audit.objectRef.resource",
+    "objectRef.resource",
+    "resource"
+  ],
+  "k8s.subresource": [
+    "k8s.subresource",
+    "kubernetes.audit.objectRef.subresource",
+    "objectRef.subresource",
+    "subresource"
+  ],
+  "k8s.requestObject": [
+    "k8s.requestObject",
+    "kubernetes.audit.requestObject",
+    "request.object",
+    "requestObject",
+    "request_body"
+  ],
+  "k8s.responseObject": [
+    "k8s.responseObject",
+    "kubernetes.audit.responseObject",
+    "response.object",
+    "responseObject",
+    "response_body"
+  ],
+  "network.destination.ip": [
+    "DestinationIp",
+    "dest.ip",
+    "destination.ip",
+    "dst_endpoint.ip",
+    "dst_ip",
+    "network.destination.ip"
+  ],
+  "network.destination.port": [
+    "DestinationPort",
+    "dest.port",
+    "destination.port",
+    "dst_port",
+    "network.destination.port"
+  ],
+  "syscall.name": [
+    "auditd.syscall",
+    "event.syscall",
+    "evt.type",
+    "syscall",
+    "syscall.name",
+    "syscall_id"
+  ],
+  "event.timestamp": [
+    "@timestamp",
+    "TimeGenerated",
+    "event.created",
+    "event.ingested",
+    "event.time",
+    "time",
+    "timestamp",
+    "ts"
+  ],
+  "_metadata": {
+    "coverage_model_version": "V8.1",
+    "description": "Common field aliases for Linux, Containers, Kubernetes, ECS, OCSF, Falco, auditd, eBPF-style schemas, and Sysmon-for-Linux-like event fields."
+  },
+  "_phase5_note": "Expanded canonical ATT&CK v19.1 Data Component hints for Linux, Containers, and Kubernetes audit contexts."
+}

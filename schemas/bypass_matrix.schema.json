@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "technique_id",
+    "behavior_primitive",
+    "bypass_variant",
+    "status",
+    "checked",
+    "blocking_coverage"
+  ],
+  "properties": {
+    "technique_id": {
+      "type": "string"
+    },
+    "behavior_primitive": {
+      "type": "string"
+    },
+    "bypass_variant": {
+      "type": "string"
+    },
+    "critical": {
+      "type": "boolean"
+    },
+    "status": {
+      "enum": [
+        "checked",
+        "unchecked",
+        "mentioned_only",
+        "condition_checked",
+        "field_chain_checked",
+        "test_checked",
+        "resilience_validated",
+        "not_applicable"
+      ]
+    },
+    "bypass_check_level": {
+      "enum": [
+        "unchecked",
+        "mentioned_only",
+        "condition_checked",
+        "field_chain_checked",
+        "test_checked",
+        "resilience_validated"
+      ]
+    },
+    "bypass_category": {
+      "type": "string"
+    },
+    "required_fields": {
+      "type": "array"
+    },
+    "checked": {
+      "type": "boolean"
+    },
+    "blocking_coverage": {
+      "type": "boolean"
+    },
+    "matched_rules": {
+      "type": "array"
+    }
+  }
+}

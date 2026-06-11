@@ -1,0 +1,3 @@
+# Optional dependencies; scripts fall back gracefully when unavailable.
+PyYAML>=6.0
+jsonschema>=4.0

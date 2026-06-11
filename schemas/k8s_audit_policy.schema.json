@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "level": {"type": "string"},
+    "requestObject": {"type": "boolean"},
+    "responseObject": {"type": "boolean"},
+    "request_object": {"type": "boolean"},
+    "response_object": {"type": "boolean"},
+    "user": {"type": "boolean"},
+    "verb": {"type": "boolean"},
+    "resource": {"type": "boolean"},
+    "namespace": {"type": "boolean"},
+    "impersonatedUser": {"type": "boolean"}
+  },
+  "additionalProperties": true
+}

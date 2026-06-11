@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["technique_id", "scenario", "coverage_object", "included", "tier", "include_reason", "denominator_confidence"],
+  "properties": {
+    "technique_id": {"type": "string"},
+    "scenario": {"type": "string"},
+    "coverage_object": {"enum": ["technique", "subtechnique", "tactic", "data_component", "detection_strategy", "analytic"]},
+    "included": {"type": "boolean"},
+    "tier": {"enum": ["must_cover", "should_cover", "optional_cover"]},
+    "denominator_role": {"enum": ["minimum_viable", "optional_review_candidate"]},
+    "include_reason": {"type": "string"},
+    "candidate_requires_review": {"type": "boolean"},
+    "denominator_confidence": {"enum": ["none", "low", "medium", "high"]}
+  }
+}

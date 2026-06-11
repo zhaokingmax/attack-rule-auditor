@@ -1,0 +1,3383 @@
+{
+  "coverage_model_version": "V10.5-wave4",
+  "generated_at": "2026-06-10T13:12:06Z",
+  "blind_spot_row_count": 123,
+  "rows": [
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1001",
+      "primary_tactic": "command-and-control",
+      "scenario": "depth_c2_resilience",
+      "behavior_primitive": "depth_t1001_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1003",
+      "primary_tactic": "credential-access",
+      "scenario": "depth_credential_access_resilience",
+      "behavior_primitive": "depth_t1003_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "credential access may resemble backup or identity-agent activity without user, process, and path context"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1003.005",
+      "primary_tactic": "credential-access",
+      "scenario": "depth_credential_access_resilience",
+      "behavior_primitive": "depth_t1003_005_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "credential access may resemble backup or identity-agent activity without user, process, and path context"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1003.007",
+      "primary_tactic": "credential-access",
+      "scenario": "depth_credential_access_resilience",
+      "behavior_primitive": "depth_t1003_007_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "credential access may resemble backup or identity-agent activity without user, process, and path context"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1003.008",
+      "primary_tactic": "credential-access",
+      "scenario": "depth_credential_access_resilience",
+      "behavior_primitive": "depth_t1003_008_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "credential access may resemble backup or identity-agent activity without user, process, and path context"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1005",
+      "primary_tactic": "collection",
+      "scenario": "depth_collection_discovery_resilience",
+      "behavior_primitive": "depth_t1005_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1016",
+      "primary_tactic": "discovery",
+      "scenario": "depth_collection_discovery_resilience",
+      "behavior_primitive": "depth_t1016_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1020",
+      "primary_tactic": "exfiltration",
+      "scenario": "depth_exfiltration_lateral_resilience",
+      "behavior_primitive": "depth_t1020_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1021.004",
+      "primary_tactic": "lateral-movement",
+      "scenario": "depth_exfiltration_lateral_resilience",
+      "behavior_primitive": "depth_t1021_004_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1021.005",
+      "primary_tactic": "lateral-movement",
+      "scenario": "depth_exfiltration_lateral_resilience",
+      "behavior_primitive": "depth_t1021_005_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1027",
+      "primary_tactic": "stealth",
+      "scenario": "depth_stealth_resilience",
+      "behavior_primitive": "depth_t1027_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "post-launch metadata mutation can require raw process snapshots or eBPF/audit correlation"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1030",
+      "primary_tactic": "exfiltration",
+      "scenario": "depth_exfiltration_lateral_resilience",
+      "behavior_primitive": "depth_t1030_l4_model",
+      "sensor_requirements": [
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "network.source.ip",
+        "network.destination.ip",
+        "network.destination.port",
+        "network.protocol",
+        "network.bytes",
+        "process.pid"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1036",
+      "primary_tactic": "stealth",
+      "scenario": "depth_stealth_resilience",
+      "behavior_primitive": "depth_t1036_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "post-launch metadata mutation can require raw process snapshots or eBPF/audit correlation"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1036.011",
+      "primary_tactic": "stealth",
+      "scenario": "depth_stealth_resilience",
+      "behavior_primitive": "depth_t1036_011_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "post-launch metadata mutation can require raw process snapshots or eBPF/audit correlation"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1039",
+      "primary_tactic": "collection",
+      "scenario": "depth_collection_discovery_resilience",
+      "behavior_primitive": "depth_t1039_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "file.path",
+        "file.operation",
+        "file.mode",
+        "file.owner",
+        "process.executable",
+        "user.id"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1041",
+      "primary_tactic": "exfiltration",
+      "scenario": "depth_exfiltration_lateral_resilience",
+      "behavior_primitive": "depth_t1041_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1048",
+      "primary_tactic": "exfiltration",
+      "scenario": "depth_exfiltration_lateral_resilience",
+      "behavior_primitive": "depth_t1048_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1048.001",
+      "primary_tactic": "exfiltration",
+      "scenario": "depth_exfiltration_lateral_resilience",
+      "behavior_primitive": "depth_t1048_001_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1048.002",
+      "primary_tactic": "exfiltration",
+      "scenario": "depth_exfiltration_lateral_resilience",
+      "behavior_primitive": "depth_t1048_002_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1048.003",
+      "primary_tactic": "exfiltration",
+      "scenario": "depth_exfiltration_lateral_resilience",
+      "behavior_primitive": "depth_t1048_003_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1053.003",
+      "primary_tactic": "persistence",
+      "scenario": "depth_persistence_privilege_resilience",
+      "behavior_primitive": "depth_t1053_003_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1053.006",
+      "primary_tactic": "persistence",
+      "scenario": "depth_persistence_privilege_resilience",
+      "behavior_primitive": "depth_t1053_006_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1053.007",
+      "primary_tactic": "persistence",
+      "scenario": "depth_persistence_privilege_resilience",
+      "behavior_primitive": "depth_t1053_007_l4_model",
+      "sensor_requirements": [
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "kubernetes_audit_or_container_runtime_events",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "network.source.ip",
+        "network.destination.ip",
+        "network.destination.port",
+        "network.protocol",
+        "network.bytes",
+        "process.pid"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1055.014",
+      "primary_tactic": "stealth",
+      "scenario": "depth_stealth_resilience",
+      "behavior_primitive": "depth_t1055_014_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "post-launch metadata mutation can require raw process snapshots or eBPF/audit correlation"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "module.name"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1057",
+      "primary_tactic": "discovery",
+      "scenario": "depth_collection_discovery_resilience",
+      "behavior_primitive": "depth_t1057_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1059.005",
+      "primary_tactic": "execution",
+      "scenario": "depth_execution_resilience",
+      "behavior_primitive": "depth_t1059_005_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "module.name"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1059.007",
+      "primary_tactic": "execution",
+      "scenario": "depth_execution_resilience",
+      "behavior_primitive": "depth_t1059_007_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "module.name"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1059.011",
+      "primary_tactic": "execution",
+      "scenario": "depth_execution_resilience",
+      "behavior_primitive": "depth_t1059_011_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1059.013",
+      "primary_tactic": "execution",
+      "scenario": "depth_execution_resilience",
+      "behavior_primitive": "depth_t1059_013_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "kubernetes_audit_or_container_runtime_events"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "container.id"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1069",
+      "primary_tactic": "discovery",
+      "scenario": "depth_collection_discovery_resilience",
+      "behavior_primitive": "depth_t1069_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1070",
+      "primary_tactic": "stealth",
+      "scenario": "depth_stealth_resilience",
+      "behavior_primitive": "depth_t1070_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "application_or_api_gateway_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "post-launch metadata mutation can require raw process snapshots or eBPF/audit correlation"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "file.path",
+        "file.operation",
+        "file.mode",
+        "file.owner",
+        "process.executable",
+        "user.id"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1070.003",
+      "primary_tactic": "stealth",
+      "scenario": "depth_stealth_resilience",
+      "behavior_primitive": "depth_t1070_003_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "post-launch metadata mutation can require raw process snapshots or eBPF/audit correlation"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1070.006",
+      "primary_tactic": "stealth",
+      "scenario": "depth_stealth_resilience",
+      "behavior_primitive": "depth_t1070_006_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "post-launch metadata mutation can require raw process snapshots or eBPF/audit correlation"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1071.001",
+      "primary_tactic": "command-and-control",
+      "scenario": "depth_c2_resilience",
+      "behavior_primitive": "depth_t1071_001_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1071.004",
+      "primary_tactic": "command-and-control",
+      "scenario": "depth_c2_resilience",
+      "behavior_primitive": "depth_t1071_004_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1074",
+      "primary_tactic": "collection",
+      "scenario": "depth_collection_discovery_resilience",
+      "behavior_primitive": "depth_t1074_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1078.001",
+      "primary_tactic": "stealth",
+      "scenario": "depth_stealth_resilience",
+      "behavior_primitive": "depth_t1078_001_l4_model",
+      "sensor_requirements": [
+        "authentication_and_identity_logs",
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "post-launch metadata mutation can require raw process snapshots or eBPF/audit correlation"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "user.name",
+        "user.id",
+        "auth.result",
+        "auth.method",
+        "source.ip",
+        "process.command_line"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1078.003",
+      "primary_tactic": "stealth",
+      "scenario": "depth_stealth_resilience",
+      "behavior_primitive": "depth_t1078_003_l4_model",
+      "sensor_requirements": [
+        "authentication_and_identity_logs",
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "post-launch metadata mutation can require raw process snapshots or eBPF/audit correlation"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "user.name",
+        "user.id",
+        "auth.result",
+        "auth.method",
+        "source.ip",
+        "process.command_line"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1082",
+      "primary_tactic": "discovery",
+      "scenario": "depth_collection_discovery_resilience",
+      "behavior_primitive": "depth_t1082_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1083",
+      "primary_tactic": "discovery",
+      "scenario": "depth_collection_discovery_resilience",
+      "behavior_primitive": "depth_t1083_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1087",
+      "primary_tactic": "discovery",
+      "scenario": "depth_collection_discovery_resilience",
+      "behavior_primitive": "depth_t1087_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1090",
+      "primary_tactic": "command-and-control",
+      "scenario": "depth_c2_resilience",
+      "behavior_primitive": "depth_t1090_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1090.001",
+      "primary_tactic": "command-and-control",
+      "scenario": "depth_c2_resilience",
+      "behavior_primitive": "depth_t1090_001_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1090.002",
+      "primary_tactic": "command-and-control",
+      "scenario": "depth_c2_resilience",
+      "behavior_primitive": "depth_t1090_002_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1090.004",
+      "primary_tactic": "command-and-control",
+      "scenario": "depth_c2_resilience",
+      "behavior_primitive": "depth_t1090_004_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1098.004",
+      "primary_tactic": "persistence",
+      "scenario": "depth_persistence_privilege_resilience",
+      "behavior_primitive": "depth_t1098_004_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1098.006",
+      "primary_tactic": "persistence",
+      "scenario": "depth_persistence_privilege_resilience",
+      "behavior_primitive": "depth_t1098_006_l4_model",
+      "sensor_requirements": [
+        "authentication_and_identity_logs",
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "user.name",
+        "user.id",
+        "auth.result",
+        "auth.method",
+        "source.ip",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1098.007",
+      "primary_tactic": "persistence",
+      "scenario": "depth_persistence_privilege_resilience",
+      "behavior_primitive": "depth_t1098_007_l4_model",
+      "sensor_requirements": [
+        "authentication_and_identity_logs",
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "user.name",
+        "user.id",
+        "auth.result",
+        "auth.method",
+        "source.ip",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1105",
+      "primary_tactic": "command-and-control",
+      "scenario": "depth_c2_resilience",
+      "behavior_primitive": "depth_t1105_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1114",
+      "primary_tactic": "collection",
+      "scenario": "depth_collection_discovery_resilience",
+      "behavior_primitive": "depth_t1114_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "application_or_api_gateway_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1114.003",
+      "primary_tactic": "collection",
+      "scenario": "depth_collection_discovery_resilience",
+      "behavior_primitive": "depth_t1114_003_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "application_or_api_gateway_logs",
+        "kubernetes_audit_or_container_runtime_events"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1129",
+      "primary_tactic": "execution",
+      "scenario": "depth_execution_resilience",
+      "behavior_primitive": "depth_t1129_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1133",
+      "primary_tactic": "initial-access",
+      "scenario": "depth_initial_access_resilience",
+      "behavior_primitive": "depth_t1133_l4_model",
+      "sensor_requirements": [
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "application_or_api_gateway_logs",
+        "authentication_and_identity_logs",
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable",
+        "application logs without source identity or resulting host state cannot prove entry-path coverage"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "network.source.ip",
+        "network.destination.ip",
+        "network.destination.port",
+        "network.protocol",
+        "network.bytes",
+        "process.pid"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1189",
+      "primary_tactic": "initial-access",
+      "scenario": "depth_initial_access_resilience",
+      "behavior_primitive": "depth_t1189_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "application_or_api_gateway_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable",
+        "application logs without source identity or resulting host state cannot prove entry-path coverage"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1190",
+      "primary_tactic": "initial-access",
+      "scenario": "depth_initial_access_resilience",
+      "behavior_primitive": "depth_t1190_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "application_or_api_gateway_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable",
+        "application logs without source identity or resulting host state cannot prove entry-path coverage"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1195",
+      "primary_tactic": "initial-access",
+      "scenario": "depth_initial_access_resilience",
+      "behavior_primitive": "depth_t1195_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "application_or_api_gateway_logs",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable",
+        "application logs without source identity or resulting host state cannot prove entry-path coverage"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1195.003",
+      "primary_tactic": "initial-access",
+      "scenario": "depth_initial_access_resilience",
+      "behavior_primitive": "depth_t1195_003_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "sensor_health_monitoring",
+        "application_or_api_gateway_logs",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable",
+        "application logs without source identity or resulting host state cannot prove entry-path coverage"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "file.path",
+        "file.operation",
+        "file.mode",
+        "file.owner",
+        "process.executable",
+        "user.id"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1199",
+      "primary_tactic": "initial-access",
+      "scenario": "depth_initial_access_resilience",
+      "behavior_primitive": "depth_t1199_l4_model",
+      "sensor_requirements": [
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "application_or_api_gateway_logs",
+        "authentication_and_identity_logs",
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable",
+        "application logs without source identity or resulting host state cannot prove entry-path coverage"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "network.source.ip",
+        "network.destination.ip",
+        "network.destination.port",
+        "network.protocol",
+        "network.bytes",
+        "process.pid"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1200",
+      "primary_tactic": "initial-access",
+      "scenario": "depth_initial_access_resilience",
+      "behavior_primitive": "depth_t1200_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "application_or_api_gateway_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable",
+        "application logs without source identity or resulting host state cannot prove entry-path coverage"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1204",
+      "primary_tactic": "execution",
+      "scenario": "depth_execution_resilience",
+      "behavior_primitive": "depth_t1204_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1204.004",
+      "primary_tactic": "execution",
+      "scenario": "depth_execution_resilience",
+      "behavior_primitive": "depth_t1204_004_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1204.005",
+      "primary_tactic": "execution",
+      "scenario": "depth_execution_resilience",
+      "behavior_primitive": "depth_t1204_005_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1210",
+      "primary_tactic": "lateral-movement",
+      "scenario": "depth_exfiltration_lateral_resilience",
+      "behavior_primitive": "depth_t1210_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "application_or_api_gateway_logs",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1213.006",
+      "primary_tactic": "collection",
+      "scenario": "depth_collection_discovery_resilience",
+      "behavior_primitive": "depth_t1213_006_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1219",
+      "primary_tactic": "command-and-control",
+      "scenario": "depth_c2_resilience",
+      "behavior_primitive": "depth_t1219_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1222",
+      "primary_tactic": "defense-impairment",
+      "scenario": "depth_defense_impact_resilience",
+      "behavior_primitive": "depth_t1222_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "sensor_health_monitoring"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1222.002",
+      "primary_tactic": "defense-impairment",
+      "scenario": "depth_defense_impact_resilience",
+      "behavior_primitive": "depth_t1222_002_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "sensor_health_monitoring"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1491",
+      "primary_tactic": "impact",
+      "scenario": "depth_defense_impact_resilience",
+      "behavior_primitive": "depth_t1491_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "application_or_api_gateway_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1496",
+      "primary_tactic": "impact",
+      "scenario": "depth_defense_impact_resilience",
+      "behavior_primitive": "depth_t1496_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "application_or_api_gateway_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1496.002",
+      "primary_tactic": "impact",
+      "scenario": "depth_defense_impact_resilience",
+      "behavior_primitive": "depth_t1496_002_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1498.001",
+      "primary_tactic": "impact",
+      "scenario": "depth_defense_impact_resilience",
+      "behavior_primitive": "depth_t1498_001_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "sensor_health_monitoring"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1498.002",
+      "primary_tactic": "impact",
+      "scenario": "depth_defense_impact_resilience",
+      "behavior_primitive": "depth_t1498_002_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "sensor_health_monitoring"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1499.001",
+      "primary_tactic": "impact",
+      "scenario": "depth_defense_impact_resilience",
+      "behavior_primitive": "depth_t1499_001_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "sensor_health_monitoring"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1499.002",
+      "primary_tactic": "impact",
+      "scenario": "depth_defense_impact_resilience",
+      "behavior_primitive": "depth_t1499_002_l4_model",
+      "sensor_requirements": [
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "application_or_api_gateway_logs",
+        "sensor_health_monitoring",
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "network.source.ip",
+        "network.destination.ip",
+        "network.destination.port",
+        "network.protocol",
+        "network.bytes",
+        "process.pid"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1499.003",
+      "primary_tactic": "impact",
+      "scenario": "depth_defense_impact_resilience",
+      "behavior_primitive": "depth_t1499_003_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "application_or_api_gateway_logs",
+        "sensor_health_monitoring",
+        "kubernetes_audit_or_container_runtime_events"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1499.004",
+      "primary_tactic": "impact",
+      "scenario": "depth_defense_impact_resilience",
+      "behavior_primitive": "depth_t1499_004_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "application_or_api_gateway_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1528",
+      "primary_tactic": "credential-access",
+      "scenario": "depth_credential_access_resilience",
+      "behavior_primitive": "depth_t1528_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "application_or_api_gateway_logs",
+        "authentication_and_identity_logs",
+        "kubernetes_audit_or_container_runtime_events"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "credential access may resemble backup or identity-agent activity without user, process, and path context"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "file.path",
+        "file.operation",
+        "file.mode",
+        "file.owner",
+        "process.executable",
+        "user.id"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1529",
+      "primary_tactic": "impact",
+      "scenario": "depth_defense_impact_resilience",
+      "behavior_primitive": "depth_t1529_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "sensor_health_monitoring"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "host.id"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1543.002",
+      "primary_tactic": "persistence",
+      "scenario": "depth_persistence_privilege_resilience",
+      "behavior_primitive": "depth_t1543_002_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1543.005",
+      "primary_tactic": "persistence",
+      "scenario": "depth_persistence_privilege_resilience",
+      "behavior_primitive": "depth_t1543_005_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "kubernetes_audit_or_container_runtime_events",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "service.name"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1548.001",
+      "primary_tactic": "privilege-escalation",
+      "scenario": "depth_persistence_privilege_resilience",
+      "behavior_primitive": "depth_t1548_001_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "authentication_and_identity_logs",
+        "kubernetes_audit_or_container_runtime_events"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "user.name"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1550",
+      "primary_tactic": "lateral-movement",
+      "scenario": "depth_exfiltration_lateral_resilience",
+      "behavior_primitive": "depth_t1550_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "application_or_api_gateway_logs",
+        "authentication_and_identity_logs",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "event.provider"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1550.001",
+      "primary_tactic": "lateral-movement",
+      "scenario": "depth_exfiltration_lateral_resilience",
+      "behavior_primitive": "depth_t1550_001_l4_model",
+      "sensor_requirements": [
+        "authentication_and_identity_logs",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "user.name",
+        "user.id",
+        "auth.result",
+        "auth.method",
+        "source.ip",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1552",
+      "primary_tactic": "credential-access",
+      "scenario": "depth_credential_access_resilience",
+      "behavior_primitive": "depth_t1552_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable",
+        "credential access may resemble backup or identity-agent activity without user, process, and path context"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1552.001",
+      "primary_tactic": "credential-access",
+      "scenario": "depth_credential_access_resilience",
+      "behavior_primitive": "depth_t1552_001_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "credential access may resemble backup or identity-agent activity without user, process, and path context"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1552.003",
+      "primary_tactic": "credential-access",
+      "scenario": "depth_credential_access_resilience",
+      "behavior_primitive": "depth_t1552_003_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "credential access may resemble backup or identity-agent activity without user, process, and path context"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1552.004",
+      "primary_tactic": "credential-access",
+      "scenario": "depth_credential_access_resilience",
+      "behavior_primitive": "depth_t1552_004_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "credential access may resemble backup or identity-agent activity without user, process, and path context"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1552.007",
+      "primary_tactic": "credential-access",
+      "scenario": "depth_credential_access_resilience",
+      "behavior_primitive": "depth_t1552_007_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "application_or_api_gateway_logs",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "credential access may resemble backup or identity-agent activity without user, process, and path context"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "event.provider"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1555",
+      "primary_tactic": "credential-access",
+      "scenario": "depth_credential_access_resilience",
+      "behavior_primitive": "depth_t1555_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "kubernetes_audit_or_container_runtime_events",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "credential access may resemble backup or identity-agent activity without user, process, and path context"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1556.003",
+      "primary_tactic": "credential-access",
+      "scenario": "depth_credential_access_resilience",
+      "behavior_primitive": "depth_t1556_003_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "credential access may resemble backup or identity-agent activity without user, process, and path context"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1558",
+      "primary_tactic": "credential-access",
+      "scenario": "depth_credential_access_resilience",
+      "behavior_primitive": "depth_t1558_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "credential access may resemble backup or identity-agent activity without user, process, and path context"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "file.path",
+        "file.operation",
+        "file.mode",
+        "file.owner",
+        "process.executable",
+        "user.id"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1560.003",
+      "primary_tactic": "collection",
+      "scenario": "depth_collection_discovery_resilience",
+      "behavior_primitive": "depth_t1560_003_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1561",
+      "primary_tactic": "impact",
+      "scenario": "depth_defense_impact_resilience",
+      "behavior_primitive": "depth_t1561_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "user.name"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1564",
+      "primary_tactic": "stealth",
+      "scenario": "depth_stealth_resilience",
+      "behavior_primitive": "depth_t1564_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "application_or_api_gateway_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "post-launch metadata mutation can require raw process snapshots or eBPF/audit correlation"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1564.001",
+      "primary_tactic": "stealth",
+      "scenario": "depth_stealth_resilience",
+      "behavior_primitive": "depth_t1564_001_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "post-launch metadata mutation can require raw process snapshots or eBPF/audit correlation"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1565",
+      "primary_tactic": "impact",
+      "scenario": "depth_defense_impact_resilience",
+      "behavior_primitive": "depth_t1565_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "file.path",
+        "file.operation",
+        "file.mode",
+        "file.owner",
+        "process.executable",
+        "user.id"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1565.001",
+      "primary_tactic": "impact",
+      "scenario": "depth_defense_impact_resilience",
+      "behavior_primitive": "depth_t1565_001_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "file.path",
+        "file.operation",
+        "file.mode",
+        "file.owner",
+        "process.executable",
+        "user.id"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1566",
+      "primary_tactic": "initial-access",
+      "scenario": "depth_initial_access_resilience",
+      "behavior_primitive": "depth_t1566_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "application_or_api_gateway_logs",
+        "authentication_and_identity_logs",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable",
+        "application logs without source identity or resulting host state cannot prove entry-path coverage"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1566.001",
+      "primary_tactic": "initial-access",
+      "scenario": "depth_initial_access_resilience",
+      "behavior_primitive": "depth_t1566_001_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "application_or_api_gateway_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable",
+        "application logs without source identity or resulting host state cannot prove entry-path coverage"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1566.002",
+      "primary_tactic": "initial-access",
+      "scenario": "depth_initial_access_resilience",
+      "behavior_primitive": "depth_t1566_002_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "application_or_api_gateway_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable",
+        "application logs without source identity or resulting host state cannot prove entry-path coverage"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1566.003",
+      "primary_tactic": "initial-access",
+      "scenario": "depth_initial_access_resilience",
+      "behavior_primitive": "depth_t1566_003_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "application_or_api_gateway_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable",
+        "application logs without source identity or resulting host state cannot prove entry-path coverage"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1566.004",
+      "primary_tactic": "initial-access",
+      "scenario": "depth_initial_access_resilience",
+      "behavior_primitive": "depth_t1566_004_l4_model",
+      "sensor_requirements": [
+        "application_or_api_gateway_logs",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable",
+        "application logs without source identity or resulting host state cannot prove entry-path coverage"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "event.provider",
+        "http.request.method",
+        "url.path",
+        "source.ip",
+        "user.name",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1569",
+      "primary_tactic": "execution",
+      "scenario": "depth_execution_resilience",
+      "behavior_primitive": "depth_t1569_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1569.003",
+      "primary_tactic": "execution",
+      "scenario": "depth_execution_resilience",
+      "behavior_primitive": "depth_t1569_003_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1570",
+      "primary_tactic": "lateral-movement",
+      "scenario": "depth_exfiltration_lateral_resilience",
+      "behavior_primitive": "depth_t1570_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1572",
+      "primary_tactic": "command-and-control",
+      "scenario": "depth_c2_resilience",
+      "behavior_primitive": "depth_t1572_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "application_or_api_gateway_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1573.001",
+      "primary_tactic": "command-and-control",
+      "scenario": "depth_c2_resilience",
+      "behavior_primitive": "depth_t1573_001_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "application_or_api_gateway_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1573.002",
+      "primary_tactic": "command-and-control",
+      "scenario": "depth_c2_resilience",
+      "behavior_primitive": "depth_t1573_002_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "application_or_api_gateway_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1574.006",
+      "primary_tactic": "stealth",
+      "scenario": "depth_stealth_resilience",
+      "behavior_primitive": "depth_t1574_006_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "post-launch metadata mutation can require raw process snapshots or eBPF/audit correlation"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1612",
+      "primary_tactic": "stealth",
+      "scenario": "depth_stealth_resilience",
+      "behavior_primitive": "depth_t1612_l4_model",
+      "sensor_requirements": [
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "kubernetes_audit_or_container_runtime_events",
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "post-launch metadata mutation can require raw process snapshots or eBPF/audit correlation"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "network.source.ip",
+        "network.destination.ip",
+        "network.destination.port",
+        "network.protocol",
+        "network.bytes",
+        "process.pid"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1613",
+      "primary_tactic": "discovery",
+      "scenario": "depth_collection_discovery_resilience",
+      "behavior_primitive": "depth_t1613_l4_model",
+      "sensor_requirements": [
+        "kubernetes_audit_or_container_runtime_events",
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "container.id",
+        "container.image",
+        "k8s.verb",
+        "k8s.resource",
+        "k8s.namespace",
+        "k8s.user"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1614",
+      "primary_tactic": "discovery",
+      "scenario": "depth_collection_discovery_resilience",
+      "behavior_primitive": "depth_t1614_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "network.source.ip"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1614.001",
+      "primary_tactic": "discovery",
+      "scenario": "depth_collection_discovery_resilience",
+      "behavior_primitive": "depth_t1614_001_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1620",
+      "primary_tactic": "stealth",
+      "scenario": "depth_stealth_resilience",
+      "behavior_primitive": "depth_t1620_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "post-launch metadata mutation can require raw process snapshots or eBPF/audit correlation"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "module.name"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1657",
+      "primary_tactic": "impact",
+      "scenario": "depth_defense_impact_resilience",
+      "behavior_primitive": "depth_t1657_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "application_or_api_gateway_logs",
+        "authentication_and_identity_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1659",
+      "primary_tactic": "command-and-control",
+      "scenario": "depth_c2_resilience",
+      "behavior_primitive": "depth_t1659_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1667",
+      "primary_tactic": "impact",
+      "scenario": "depth_defense_impact_resilience",
+      "behavior_primitive": "depth_t1667_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "application_or_api_gateway_logs"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "file.path",
+        "file.operation",
+        "file.mode",
+        "file.owner",
+        "process.executable",
+        "user.id"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1669",
+      "primary_tactic": "initial-access",
+      "scenario": "depth_initial_access_resilience",
+      "behavior_primitive": "depth_t1669_l4_model",
+      "sensor_requirements": [
+        "network_flow_or_nsm",
+        "endpoint_socket_telemetry",
+        "authentication_and_identity_logs",
+        "application_or_api_gateway_logs",
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims",
+        "encrypted traffic may hide payload content; require flow/process correlation when content is unavailable",
+        "application logs without source identity or resulting host state cannot prove entry-path coverage"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "network.source.ip",
+        "network.destination.ip",
+        "network.destination.port",
+        "network.protocol",
+        "network.bytes",
+        "process.pid"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1674",
+      "primary_tactic": "execution",
+      "scenario": "depth_execution_resilience",
+      "behavior_primitive": "depth_t1674_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1685",
+      "primary_tactic": "defense-impairment",
+      "scenario": "depth_defense_impact_resilience",
+      "behavior_primitive": "depth_t1685_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "kubernetes_audit_or_container_runtime_events",
+        "sensor_health_monitoring"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "service.name"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1685.004",
+      "primary_tactic": "defense-impairment",
+      "scenario": "depth_defense_impact_resilience",
+      "behavior_primitive": "depth_t1685_004_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "sensor_health_monitoring"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1685.006",
+      "primary_tactic": "defense-impairment",
+      "scenario": "depth_defense_impact_resilience",
+      "behavior_primitive": "depth_t1685_006_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "sensor_health_monitoring"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "file.path"
+      ]
+    },
+    {
+      "coverage_model_version": "V10.5-wave4",
+      "technique_id": "T1690",
+      "primary_tactic": "defense-impairment",
+      "scenario": "depth_defense_impact_resilience",
+      "behavior_primitive": "depth_t1690_l4_model",
+      "sensor_requirements": [
+        "linux_auditd_or_ebpf",
+        "endpoint_process_file_telemetry",
+        "sensor_health_monitoring"
+      ],
+      "blind_spots": [
+        "rule logic that keys only on ATT&CK tag, tool name, or a single normalized field remains insufficient",
+        "missing collector, parser, or normalizer field-chain proof prevents resilient claims"
+      ],
+      "minimum_fields": [
+        "event.action",
+        "event.category",
+        "process.command_line",
+        "process.executable",
+        "process.pid",
+        "process.parent.pid",
+        "user.id",
+        "host.id"
+      ]
+    }
+  ],
+  "safe_use_note": "Sensor blind spots describe defensive validation limits only."
+}

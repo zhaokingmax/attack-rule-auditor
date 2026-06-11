@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "kernel_version": {"type": "string"},
+    "release": {"type": "string"},
+    "cgroup_version": {"type": ["string", "integer"]},
+    "btf_available": {"type": "boolean"},
+    "core_supported": {"type": "boolean"}
+  },
+  "additionalProperties": true
+}

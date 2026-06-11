@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["scope", "runtime", "maintenance", "utility", "archived", "experimental"],
+  "properties": {
+    "scope": {"type": "string"},
+    "runtime": {"type": "array", "items": {"type": "string"}},
+    "maintenance": {"type": "array", "items": {"type": "string"}},
+    "utility": {"type": "array", "items": {"type": "string"}},
+    "archived": {"type": "array", "items": {"type": "string"}},
+    "experimental": {"type": "array", "items": {"type": "string"}}
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "scope": {
+    "platform": "Linux,Containers,Network Devices",
+    "scope_file": "attack_data/index/linux_container_network_scope.jsonl",
+    "attack_index": "attack_data/index",
+    "scenario_model": "attack_data/models/scenario_attack_model.json",
+    "field_alias_pack": "attack_data/field_aliases/common_linux_container_k8s_network.json"
+  },
+  "audit": {
+    "output_root": ".audit_runs",
+    "phase_timeout_seconds": 120,
+    "retention_keep_latest": 10,
+    "retention_archive_root": "laji/audit_runs"
+  },
+  "verification": {
+    "smoke_input": "laji/test_inputs",
+    "smoke_scenario": "container_escape",
+    "smoke_output_root": "laji/.audit_runs",
+    "report_output_root": "laji/attack_data/reports"
+  },
+  "safety": {
+    "supported_scope_only": true,
+    "allow_offensive_payloads": false,
+    "bypass_output_mode": "defensive-proof-gaps"
+  }
+}

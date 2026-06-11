@@ -1,0 +1,27 @@
+{
+  "scope": "Linux,Containers,Kubernetes scenarios,Network Devices",
+  "profiles": {
+    "linux_host": {
+      "required_capabilities": ["process_events", "file_events", "network_events", "user_auth_events", "kernel_syscalls"],
+      "required_context": ["kernel_version", "cgroup_version", "sensor_health"]
+    },
+    "container_runtime": {
+      "required_capabilities": ["container_events", "process_events", "file_events", "network_events", "image_events"],
+      "required_context": ["runtime_inventory", "cgroup_version", "container_runtime"]
+    },
+    "kubernetes": {
+      "required_capabilities": ["k8s_audit_events", "container_events", "user_auth_events"],
+      "required_context": ["k8s_audit_policy", "requestObject", "responseObject", "verb", "resource", "namespace", "user"]
+    },
+    "network_device": {
+      "required_capabilities": ["network_device_syslog", "network_device_aaa", "network_device_config_change", "netflow_or_ipfix", "snmp_traps"],
+      "required_context": ["device_inventory", "firmware_inventory", "configuration_archive", "aaa_source"]
+    }
+  },
+  "cap_policy": {
+    "missing_inventory": "cap comprehensive claims",
+    "sensor_loss_or_sampling": "cap resilience claims",
+    "missing_required_fields": "cap field-chain claims",
+    "missing_fixture_chain": "cap bypass-resilience claims"
+  }
+}

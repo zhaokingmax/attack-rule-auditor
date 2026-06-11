@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "lost_events": {"type": ["integer", "number"]},
+    "drop_rate": {"type": ["integer", "number"]},
+    "event_drop_rate": {"type": ["integer", "number"]},
+    "ring_buffer_overflow": {"type": "boolean"},
+    "perf_buffer_overflow": {"type": "boolean"},
+    "audit_backlog": {"type": "boolean"},
+    "audit_backlog_events": {"type": ["integer", "number"]},
+    "sampling_enabled": {"type": "boolean"},
+    "collector_restart": {"type": "boolean"},
+    "process_events": {"type": "boolean"},
+    "file_events": {"type": "boolean"},
+    "network_events": {"type": "boolean"},
+    "container_events": {"type": "boolean"},
+    "k8s_audit_events": {"type": "boolean"},
+    "image_events": {"type": "boolean"},
+    "user_auth_events": {"type": "boolean"},
+    "kernel_syscalls": {"type": "boolean"}
+  },
+  "additionalProperties": true
+}

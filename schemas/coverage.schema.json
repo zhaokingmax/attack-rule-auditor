@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["technique_id", "scenario", "coverage_type", "depth", "depth_vector", "strength", "confidence", "gap_reason_codes", "evidence_status"],
+  "properties": {
+    "technique_id": {"type": "string"},
+    "technique_name": {"type": ["string", "null"]},
+    "scenario": {"type": "string"},
+    "coverage_object": {"enum": ["technique", "subtechnique", "tactic", "data_component", "detection_strategy", "analytic", "unknown"]},
+    "coverage_type": {"enum": ["none", "declared_only", "candidate_mapping", "inferred_semantic", "telemetry_supportable", "rule_condition_present", "field_chain_validated", "tested_validated"]},
+    "depth": {"type": "integer", "minimum": 0, "maximum": 5},
+    "depth_vector": {
+      "type": "object",
+      "required": ["semantic_depth", "telemetry_depth", "correlation_depth", "test_depth", "resilience_depth", "final_depth"],
+      "properties": {
+        "semantic_depth": {"type": "integer", "minimum": 0, "maximum": 5},
+        "telemetry_depth": {"type": "integer", "minimum": 0, "maximum": 5},
+        "correlation_depth": {"type": "integer", "minimum": 0, "maximum": 5},
+        "test_depth": {"type": "integer", "minimum": 0, "maximum": 5},
+        "resilience_depth": {"type": "integer", "minimum": 0, "maximum": 5},
+        "final_depth": {"type": "integer", "minimum": 0, "maximum": 5}
+      }
+    },
+    "strength": {"enum": ["none", "weak", "partial", "strong", "deep"]},
+    "confidence": {"enum": ["none", "low", "medium-low", "medium", "medium-high", "high"]},
+    "coverage_score": {"type": "number"},
+    "gap_reason_codes": {"type": "array", "items": {"type": "string"}},
+    "evidence_status": {"enum": ["verified", "partially_verified", "not_verified"]},
+    "evidence_ids": {"type": "array", "items": {"type": "string"}}
+  }
+}

@@ -1,0 +1,32 @@
+# Files and directories to exclude from repository
+
+# Excluded directories
+laji/
+
+# Excluded files
+enterprise-attack.json
+SKILL.md
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Audit runs (generated output)
+.audit_runs/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db

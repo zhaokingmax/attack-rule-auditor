@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "mode": {
+      "type": "string"
+    },
+    "scenario_compatibility": {
+      "type": "string"
+    },
+    "a_only": {
+      "type": "array"
+    },
+    "b_only": {
+      "type": "array"
+    },
+    "both": {
+      "type": "array"
+    },
+    "neither": {
+      "type": "array"
+    }
+  }
+}

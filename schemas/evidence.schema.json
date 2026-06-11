@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "evidence_id",
+    "file_path",
+    "start_line",
+    "end_line",
+    "evidence_type",
+    "excerpt_sha256"
+  ],
+  "properties": {
+    "evidence_id": {
+      "type": "string"
+    },
+    "file_path": {
+      "type": "string"
+    },
+    "start_line": {
+      "type": "integer"
+    },
+    "end_line": {
+      "type": "integer"
+    },
+    "evidence_type": {
+      "type": "string"
+    },
+    "excerpt": {
+      "type": "string"
+    },
+    "excerpt_sha256": {
+      "type": "string"
+    },
+    "signals": {
+      "type": "array"
+    }
+  }
+}

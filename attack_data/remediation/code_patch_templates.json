@@ -1,0 +1,42 @@
+{
+  "python": {
+    "target": "parser, normalizer, or detection evaluator",
+    "template": "required = {fields}; missing = [f for f in required if not event.get(f)]; verdict = 'incomplete_evidence' if missing else evaluate_semantics(event)"
+  },
+  "go": {
+    "target": "typed event struct or rule evaluator",
+    "template": "required := []string{{fields}}; missing := MissingFields(event, required); if len(missing) > 0 { return IncompleteEvidence(missing) }"
+  },
+  "rust": {
+    "target": "serde event model or rule evaluator",
+    "template": "let missing = event.missing_required_fields(&[{fields}]); if !missing.is_empty() { return Verdict::IncompleteEvidence(missing); }"
+  },
+  "java": {
+    "target": "schema-backed event class or rule evaluator",
+    "template": "List<String> missing = event.missingRequiredFields(List.of({fields})); if (!missing.isEmpty()) return Verdict.incompleteEvidence(missing);"
+  },
+  "c": {
+    "target": "collector struct, serializer, or parser boundary",
+    "template": "track required fields in the emitted event struct, set field_present flags, and return an incomplete-evidence status when required fields are absent"
+  },
+  "c_cpp": {
+    "target": "collector class, serializer, or parser boundary",
+    "template": "preserve raw and normalized aliases in the event object, expose required-field checks, and surface incomplete evidence instead of a strong detection claim"
+  },
+  "sigma_yaml": {
+    "target": "Sigma detection condition",
+    "template": "add behavior, identity, object, action, and context selections; combine them with all-of semantics and explicit benign filters"
+  },
+  "falco_yaml": {
+    "target": "Falco rule condition",
+    "template": "require evt/proc/container/k8s fields that prove the behavior and add exceptions for approved administrative workflows"
+  },
+  "auditd": {
+    "target": "auditd watch/syscall rules",
+    "template": "add syscall/path watches that preserve uid, auid, pid, exe, path, action, and loss/backlog evidence"
+  },
+  "yaml": {
+    "target": "generic detection rule",
+    "template": "require correlated identity, object, action, time, and runtime or device context fields"
+  }
+}

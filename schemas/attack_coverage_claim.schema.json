@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "technique_id",
+    "coverage_type",
+    "final_claim",
+    "coverage_blockers"
+  ],
+  "properties": {
+    "technique_id": {
+      "type": "string"
+    },
+    "technique_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "scenario": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "denominator_tier": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "coverage_type": {
+      "type": [
+        "string"
+      ]
+    },
+    "strength": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "confidence": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "depth_vector": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "bypass_primitives_total": {
+      "type": "integer"
+    },
+    "bypass_primitives_checked": {
+      "type": "integer"
+    },
+    "critical_bypass_unchecked": {
+      "type": "integer"
+    },
+    "coverage_blockers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "final_claim": {
+      "enum": [
+        "not_covered",
+        "declared_or_inferred_only",
+        "supportable_or_condition_only",
+        "field_chain_validated_not_resilience_tested",
+        "validated_but_bypass_gap",
+        "validated_with_blockers",
+        "resilience_validated"
+      ]
+    }
+  }
+}

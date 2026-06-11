@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["can_claim_full_enterprise_attack_coverage", "can_claim_full_linux_containers_attack_coverage", "scenario_coverage_claim", "complete_coverage_gate_passed", "blocking_reasons"],
+  "properties": {
+    "can_claim_full_enterprise_attack_coverage": {"enum": ["No", "Yes"]},
+    "can_claim_full_linux_containers_attack_coverage": {"enum": ["No", "Yes"]},
+    "scenario_coverage_claim": {"enum": ["not_covered", "partially_covered", "operationally_covered", "comprehensively_covered"]},
+    "complete_coverage_gate_passed": {"type": "boolean"},
+    "blocking_reasons": {"type": "array", "items": {"type": "string"}}
+  }
+}

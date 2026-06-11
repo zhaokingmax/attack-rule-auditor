@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "docker": {"type": "boolean"},
+    "containerd": {"type": "boolean"},
+    "cri-o": {"type": "boolean"},
+    "runc": {"type": "boolean"},
+    "kata": {"type": "boolean"},
+    "gvisor": {"type": "boolean"},
+    "firecracker": {"type": "boolean"},
+    "kubernetes": {"type": "boolean"},
+    "network_devices": {"type": "boolean"},
+    "cgroup_version": {"type": ["string", "integer"]},
+    "runtimes": {"type": "array", "items": {"type": "string"}},
+    "runtime_classes": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

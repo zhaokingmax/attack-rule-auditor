@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["finding_id", "severity", "attack_id", "language", "blockers", "recommendation", "code_patch_strategy"],
+  "properties": {
+    "finding_id": {"type": "string"},
+    "severity": {"type": "string"},
+    "attack_id": {"type": ["string", "null"]},
+    "scenario": {"type": ["string", "null"]},
+    "file_path": {"type": ["string", "null"]},
+    "rule_id": {"type": ["string", "null"]},
+    "candidate_patch_files": {"type": "array", "items": {"type": "string"}},
+    "language": {"type": "string"},
+    "blockers": {"type": "array", "items": {"type": "string"}},
+    "recommendation": {"type": "string"},
+    "required_fields": {"type": "array", "items": {"type": "string"}},
+    "code_patch_strategy": {"type": "object"}
+  },
+  "additionalProperties": true
+}

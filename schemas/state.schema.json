@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "run_id",
+    "mode",
+    "status",
+    "phases"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "phases": {
+      "type": "object"
+    }
+  }
+}
