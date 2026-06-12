@@ -5,7 +5,6 @@ laji/
 
 # Excluded files
 enterprise-attack.json
-SKILL.md
 
 # Python artifacts
 __pycache__/
